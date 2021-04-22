@@ -18,8 +18,9 @@ abstract class NoteDB : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     NoteDB::class.java,
-                    "note_database"
-                ).build()
+                    "note_database")
+                        .fallbackToDestructiveMigration()
+                        .build()
 
                 INSTANCE = instance
 
