@@ -1,6 +1,7 @@
 package com.example.androidarchexample
 
 import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NoteDao {
@@ -17,5 +18,5 @@ interface NoteDao {
     suspend fun deleteAllNotes()
 
     @Query("SELECT * FROM note_table ORDER BY priority DESC")
-    fun getAllNotes() : List<Note>
+    fun getAllNotes() : Flow<List<Note>>
 }
