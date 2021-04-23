@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">AndroidArchExample</string>
-    <string name="add_word">Add</string>
+
+    <string name="hint_title">Title...</string>
+    <string name="hint_description">Description...</string>
+    <string name="empty_not_saved">Note not saved; at least one field is empty.</string>
+    <string name="add_note">Add Note</string>
 </resources>
