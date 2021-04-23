@@ -1,8 +1,12 @@
 package com.example.androidarchexample
 
 import android.app.Application
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 
 class NotesApplication : Application() {
-    val database by lazy { NoteDB.getDatabase(this) }
+    val applicationScope = CoroutineScope(SupervisorJob())
+
+    val database by lazy { NoteDB.getDatabase(this, applicationScope) }
     val repository by lazy { NoteRepository(database.noteDao()) }
 }
