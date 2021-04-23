@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidArchExample</string>
+    <string name="add_word">Add</string>
 </resources>
